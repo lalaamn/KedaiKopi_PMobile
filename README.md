@@ -1,3 +1,6 @@
+Mala Hasanatul Amanah_2106042_Informatika D ( UAS PEMROGRAMAN MOBILE )
+
+
 # KedaiKopi
 
 Aplikasi KedaiKopi adalah aplikasi manajemen kedai kopi yang memungkinkan pengguna untuk mengelola produk dan lain lain. Aplikasi ini dibangun menggunakan Flutter dan berinteraksi dengan API untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada data produk, stok, dan sales.
