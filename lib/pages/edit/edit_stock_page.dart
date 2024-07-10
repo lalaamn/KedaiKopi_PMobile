@@ -1,3 +1,5 @@
+// baru update
+
 import 'package:flutter/material.dart';
 import 'package:kedaikopi/models/stock.dart';
 import 'package:kedaikopi/services/api_service.dart';
@@ -97,9 +99,9 @@ class _EditStockPageState extends State<EditStockPage> {
                             try {
                               var response = await apiService.editStock(
                                   _productNameController.text,
-                                  int.parse(_productQtyController.text),
+                                  num.parse(_productQtyController.text),
                                   _productAttrController.text,
-                                  int.parse(_productWeightController.text),
+                                  num.parse(_productWeightController.text),
                                   widget.id);
                               print(
                                   'Stock updated successfully: ${response.statusCode}');
