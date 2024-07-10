@@ -1,10 +1,12 @@
+// baru update
+
 class Product {
   final String id;
   final String name;
-  final int price;
+  final num price;
   final String attr;
-  final int qty;
-  final int weight;
+  final num qty;
+  final num weight;
   final int createdAt;
   final int updatedAt;
   final dynamic issuer;
