@@ -1,9 +1,11 @@
+// baru update 
+
 class Stock {
   final String id;
   final String name;
-  final int qty;
+  final num qty;
   final String attr;
-  final int weight;
+  final num weight;
   final int createdAt;
   final int updatedAt;
   final dynamic issuer;
