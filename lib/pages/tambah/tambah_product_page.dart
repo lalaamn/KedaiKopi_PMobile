@@ -1,3 +1,5 @@
+// baru update
+
 import 'package:flutter/material.dart';
 import 'package:kedaikopi/main.dart';
 import 'package:kedaikopi/services/api_service.dart';
@@ -72,10 +74,10 @@ class _TambahProductPageState extends State<TambahProductPage> {
                       try {
                         var response = await ApiService().createProduct(
                           _productNameController.text,
-                          int.parse(_productPriceController.text),
-                          int.parse(_productQtyController.text),
+                          num.parse(_productPriceController.text),
+                          num.parse(_productQtyController.text),
                           _productAttrController.text,
-                          int.parse(_productWeightController.text),
+                          num.parse(_productWeightController.text),
                         );
                         print(
                             'Product created successfully: ${response.statusCode}');
