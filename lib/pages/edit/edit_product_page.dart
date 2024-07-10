@@ -1,3 +1,5 @@
+// baru update
+
 import 'package:flutter/material.dart';
 import 'package:kedaikopi/models/product.dart';
 import 'package:kedaikopi/services/api_service.dart';
@@ -106,10 +108,10 @@ class _EditProductPageState extends State<EditProductPage> {
                             try {
                               var response = await apiService.editProduct(
                                 _productNameController.text,
-                                int.parse(_productPriceController.text),
-                                int.parse(_productQtyController.text),
+                                num.parse(_productPriceController.text),
+                                num.parse(_productQtyController.text),
                                 _productAttrController.text,
-                                int.parse(_productWeightController.text),
+                                num.parse(_productWeightController.text),
                                 widget.id,
                               );
                               print(
