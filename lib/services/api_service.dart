@@ -1,3 +1,5 @@
+// baru update
+
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:kedaikopi/models/sales.dart';
@@ -21,7 +23,7 @@ class ApiService {
 
   Future<List<Stock>> getStocks() async {
     final response = await http.get(Uri.parse('$baseUrl/stocks'));
-   if (response.statusCode == 200) {
+    if (response.statusCode == 200) {
       List<dynamic> body = jsonDecode(response.body);
       List<Stock> stocks =
           body.map((dynamic item) => Stock.fromJson(item)).toList();
@@ -97,8 +99,8 @@ class ApiService {
     }
   }
 
-  Future<http.Response> editProduct(String name, int price, int qty,
-      String attr, int weight, String id) async {
+  Future<http.Response> editProduct(String name, num price, num qty,
+      String attr, num weight, String id) async {
     final response = await http.put(
       Uri.parse('$baseUrl/products/$id'),
       body: json.encode({
@@ -120,7 +122,7 @@ class ApiService {
   }
 
   Future<http.Response> editStock(
-      String name, int qty, String attr, int weight, String id) async {
+      String name, num qty, String attr, num weight, String id) async {
     final response = await http.put(
       Uri.parse('$baseUrl/stocks/$id'),
       body: json.encode({
@@ -162,7 +164,7 @@ class ApiService {
   }
 
   Future<http.Response> createProduct(
-      String name, int price, int qty, String attr, int weight) async {
+      String name, num price, num qty, String attr, num weight) async {
     final response = await http.post(
       Uri.parse('$baseUrl/products'),
       body: json.encode({
@@ -184,7 +186,7 @@ class ApiService {
   }
 
   Future<http.Response> createStock(
-      String name, int qty, String attr, int weight) async {
+      String name, num qty, String attr, num weight) async {
     final response = await http.post(
       Uri.parse('$baseUrl/stocks'),
       body: json.encode({
